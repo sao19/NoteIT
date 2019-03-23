@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/tutorial.css">
+</head>
+
+<body>
+    
+<div class="header">
+  <h1>Note IT!</h1>
+  <p>Coding Tips, Tutorials and Ideas in Blog Format  </p>
+  <nav>
+      <ul>
+        <li><a href="index.html">About</a></li> <li><a href="tutorial.html">Note</a></li>
+      </ul>
+  </nav>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card" id="GitHubPush">
+      <h2><i>Push code</i> ke GitHub tanpa kata sandi</h2>
+      <h5>Cara push ke Github tanpa password, 23 Mar 2019</h5>
+      <div class="theimage" style="height:200px;"><img src="images/githubpush/GitHubPush.jpg"></div>
+      <br>
+      <p>SSH (<i>Secure SHell</i>) merupakan perangkat lunak yang dapat digunakan untuk mentransfer data antar komputer secara terenkripsi.
+      Sehingga kita dapat melakukan transfer data pada <i>git</i> dengan menggunakan <i>ssh</i> atau <i>git over ssh</i>.
+      <p>Untuk menggunakan ssh kita perlu melakukan otentikasi pada komputer tujuan, salah satu metode otentikasi adalah dengan 
+      menggunakan <i>private-public key pair</i>. Dengan menggunakan metode ini maka proses transfer data dapat dilakukan tanpa perlu 
+      mengetikkan kata sandi setiap kali proses transfer data dilakukan.</p>
+      <p>Fitur dari <i>ssh</i> inilah yang kita gunakan untuk <i>push code</i>kita ke github tanpa kata sandi. Caranya gampang 
+      <i>gaes</i> langsung disimak saja.</p>
+      <ol>
+        <li>Persiapkan <i>public key ssh</i>, bila anda belum punya maka buka terminal dan ketik perintah berikut:<br>
+          <b>$ ssh keygent -t rsa</b><br>
+          Setiap pertanyaan yang muncul tekan tombol enter saja</li><br>
+        <li>Copy isi file dari <b>~/.ssh/id_rsa.pub</b></li><br>
+        <li>Klik tautan <a href="https://github.com/settings/ssh/new">berikut</a>.<br>
+        Kemudian login jika anda belum melakukannya.</li><br>
+        <li>Isikan name <i>key</i> anda pada kolom <i>Title</i>>, <i>misal: ubuntu laptop key</i>.<br>
+        Kemudian paste isi dari file <b>id_rsa.pub</b>yang tadi di <i>copy</i> ke kolom <i>Key</i>.</li><br>
+        <li>Pastikan <i>remote url</i> yang anda sudah mneggunakan <i>ssh</i>. Buka terminal dan ketik perintah berikut:<br>
+        <b>$ git remote set-url origin git@github.com:<i>USERNAME/REPOSITORY.git</i></b><br>
+        Anda rubah <i>USERNAME/REPOSITORY</i> diatas dengan <i>username dan nama repository</i> anda</li>.
+      </ol>
+      <p><i>Voila,</i> anda sudah dapat melakukan sinkronisasi dengan github anda tanpa kata sandi.<br>
+      Artikel mengenai ssh dapat anda baca pada tautan <a href="https://en.m.wikipedia.org/wiki/Secure_Shell">berikut</a>.</p>
+    </div>
+
+<!---------------------------------- END First Left Column------------------------------------------------------------>
+
+    <div class="card" id="BlogBodyLayout">
+      <h2>Blog <i>Body Layout</i></h2>
+      <h5>Konten <i>Layout</i> dari blog ini dalam HTML & CSS, 23 Maret 2019</h5>
+      <div class="theimage" style="height:200px;"><img src="images/bodylayout/bodylayout.png"></div>
+      <p>Salah satu bagian dari proses pembuatan website adalah men-<i>design layout</i> sebagai kerangka website tersebut. Langsung 
+      saja <i>gaes, layout</i> website ini dalam css.</p>
+      <p><i>Flow HTML</i> adalah cara browser me-<i>render</i> dari atas kebawah. Dan Elemen-elemen HTML dipandang sebagai sebuah box.
+      Ide dari layout ini adalah membuat 2 kontainer utama yang akan ditampilkan berdampingan, kemudian dari masing-masing kontainer
+      tersebut akan di buat beberapa <i>child element</i> sebagai kontent dari website.</p>
+      <p>Pertama-tama buat 2 kontainer utama, dan tentukan <i>width</i> dari masing elemen serta tambahkan <i>background-color dan 
+      height</i> nya agar kontainer dapat terlihat. Berikut merupakan tampilan dari kontainer tersebut dengan nilai untuk masing-masing
+      property, <i>width: </i><b>75% dan 25%</b>, <i>background-color: </i><b>green dan black</b>, <i>height: </i><b>400px</b>.<br>
+      <img src="images/bodylayout/maincontainer.png" height="200" width="400"></p>
+      <p>Kemudian tambahkan properti <i>float: </i><b>left</b> pada kedua kontainer utama agar tampilannya sejajar. Selanjutnya buat <i>child
+      element</i> pada kedua kontainer tersebut sebagai kontainer untuk kontent. Dan <i>Voila,</i> jadilah kerangka <i>layout</i> untuk 
+      blog kita.</p>
+      <p>Berikut merupakan kode css dan html dasar untuk <i>layout</i> nya</p>
+      <div class=subbodycontainer>
+        <div class="leftbodylayoutcontainer">
+          <img class="imagelayout" src="images/bodylayout/css.png"><br>
+          Kode CSS
+        </div>
+        <div class="rightbodylayoutcontainer">
+          <div class="bodylayoutcontent">
+            <img src="images/bodylayout/html.png"><br>
+            Kode HTML
+          </div>
+          <br>
+          <div class="bodylayoutcontent>">
+            <img src="images/bodylayout/layoutskeleton.png" width="400px"><br>
+            Tampilan layout (Ide dasarnya)
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!--------------------------------  END 2nd till last Left Column------------------------------------------------------->
+
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Popular Post</h2>
+      <p><a href="#GitHubPush"><i>Push code</i> ke GitHub tanpa kata sandi</a></p>
+      <p><a href="#BlogBodyLayout">Blog <i>Body Layout</i></a></p>
+    </div>
+    <div class="card">
+      <h3>All Post</h3>
+      <ul>
+          <li><details>
+              <summary>2019</summary>
+              <ul>
+                <li><details>
+                    <summary>Maret</summary>
+                    <ul>
+                        <li><a href="#GitHubPush"><i>Push code</i> ke GitHub tanpa kata sandi</a></li><br>
+                        <li><a href="#BlogBodyLayout">Blog <i>Body Layout</i></a></li>
+                    </ul>
+                </details></li>
+              </ul>
+          </details></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Note IT @2019</h2>
+</div>
+
+</body>
+</html>

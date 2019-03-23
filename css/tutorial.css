@@ -1,0 +1,23 @@
+.leftbodylayoutcontainer {
+    float: left;
+    width: 30%;
+  }
+
+  .rightbodylayoutcontainer {
+    width: 70%;
+    float: left;
+    padding-left: 20px;
+  }
+
+  .subbodycontainer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (max-width: 800px) {
+    .leftbodylayoutcontainer, .rightbodylayoutcontainer {   
+      width: 100%;
+      padding: 0;
+    }
+  }
